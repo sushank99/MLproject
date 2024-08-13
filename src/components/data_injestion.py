@@ -6,10 +6,13 @@ sys.path.append(str(Path(__file__).parent.parent))
 from logger import logging
 import pandas as pd
 from exception import CustomException
+from model_trainer import ModelTrainerConfig
+from model_trainer import ModelTrainer
+
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-from src.components.data_transformation import DataTransformation
-from src.components.data_transformation import DataTransformationConfig
+from data_transformation import DataTransformation
+from data_transformation import DataTransformationConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -43,8 +46,13 @@ class DataIngestion:
                 )
         except Exception as e:
             raise CustomException(e,sys)
+        
 if __name__=="__main__":
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
+    
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_tranformation(train_data, test_data)
+    train_arr, test_arr,_ = data_transformation.initiate_data_tranformation(train_data, test_data)
+
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))

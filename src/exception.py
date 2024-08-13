@@ -1,21 +1,19 @@
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
-from logger import logging
 
-def error_message_details(error, error_detail:sys):  
-    _,_,exc_tb = error_detail.exc_info()
-    file_name = exc_tb.tb_frame.f_code.co_filename
-    error_message = "error occured in python script name [{0}] at line [{1}] error message [{2}]".format(
-        file_name, exc_tb.tb_lineno, str(error))
-
-    return error_message
+import traceback
 
 class CustomException(Exception):
-    def __init__(self, error_message, error_detail:sys):
+    def __init__(self, error_message, error_detail: sys):
         super().__init__(error_message)
-        self.error_message = error_message_details(error_message, error_detail= error_detail)
+        self.error_message = error_message
+        self.error_detail = error_detail
 
-    def __str__(self):
-        return self.error_message
+    def error_message_details(self):
+        _, _, exc_tb = sys.exc_info()
+        file_name = exc_tb.tb_frame.f_code.co_filename
+        error_message = f"Error occurred in file [{file_name}] at line [{exc_tb.tb_lineno}] with message [{self.error_message}]"
+        return error_message
+
     
