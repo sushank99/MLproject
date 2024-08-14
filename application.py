@@ -4,7 +4,7 @@ from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/app")
 def index():
     return render_template("index.html")
 
@@ -33,4 +33,4 @@ def predict_datapoint():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)  # Ensure port 5000 or use a different one if needed
+    app.run(port=5001)  # Ensure port 5000 or use a different one if needed
