@@ -34,7 +34,9 @@ The **Student Performance Outcome Prediction** project aims to predict students'
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.9
+- Pandas
+- Flask
 - Pip (Python package installer)
 
 ### Setup
@@ -44,3 +46,12 @@ The **Student Performance Outcome Prediction** project aims to predict students'
    ```bash
    git clone https://github.com/sushank99/Student-Performace-Outcome-Prediction.git
    cd student-performance-prediction
+### **Run Applicaton File**
+- To start the web application, use:
+
+   ```bash
+   python app.py     
+### How to Use the Web Application
+- Navigate to http://localhost:5001 in your web browser.
+- Fill in the form with the required student details.
+- Submit the form to receive the predicted mathematics score.
