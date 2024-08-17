@@ -4,6 +4,12 @@
 
 The **Student Performance Outcome Prediction** project aims to predict students' mathematics scores based on various features including gender, ethnicity, parental education level, lunch status, and test preparation course completion. Utilizing machine learning algorithms, this project provides insights into student performance and helps in identifying factors that influence academic success.
 
+
+![image](https://github.com/user-attachments/assets/2cdce8b4-8a09-463e-a667-15d44f13a6c1)
+
+![image](https://github.com/user-attachments/assets/825aeccf-3e3f-4818-933b-d4a94112e6e9)
+
+
 ## Project Structure
 
 - **`data_ingestion.py`**: Manages the ingestion of raw data, including splitting and saving datasets.
