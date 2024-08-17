@@ -2,28 +2,38 @@
 
 ## Overview
 
-This project predicts student performance based on various features such as gender, race, parental education level, and test scores. It uses machine learning models to analyze the input data and predict the student's performance in mathematics.
+The **Student Performance Outcome Prediction** project aims to predict students' mathematics scores based on various features including gender, ethnicity, parental education level, lunch status, and test preparation course completion. Utilizing machine learning algorithms, this project provides insights into student performance and helps in identifying factors that influence academic success.
 
 ## Project Structure
 
-1. **Data Ingestion (`data_ingestion.py`)**: Handles data reading, splitting, and saving.
-2. **Data Transformation (`data_transformation.py`)**: Preprocesses data for model training.
-3. **Model Training (`model_trainer.py`)**: Trains and evaluates different machine learning models.
-4. **Prediction Pipeline (`predict_pipeline.py`)**: Provides an interface for making predictions with trained models.
-5. **Utilities (`utils.py`)**: Contains helper functions for saving/loading models and evaluating performance.
-6. **Web Application (`app.py`)**: A Flask-based web application for interacting with the prediction model.
-7. **Requirements File (`requirements.txt`)**: Lists the Python packages required for the project.
+- **`data_ingestion.py`**: Manages the ingestion of raw data, including splitting and saving datasets.
+- **`data_transformation.py`**: Preprocesses data by handling missing values and scaling features.
+- **`model_trainer.py`**: Trains multiple machine learning models, evaluates their performance, and selects the best model.
+- **`predict_pipeline.py`**: Provides a prediction interface using the trained model and preprocessing object.
+- **`utils.py`**: Contains utility functions for model management and evaluation.
+- **`app.py`**: Implements a Flask web application for user interaction and prediction.
+- **`setup.py`**: Sets up the project environment and dependencies.
+- **`exception.py`**: Defines custom exceptions for error handling.
+- **`logger.py`**: Configures logging to track events and errors during execution.
 
-## Setup
+## Features
+
+- **Data Ingestion**: Reads, splits, and stores raw data for further processing.
+- **Data Transformation**: Prepares data by handling missing values and normalizing features.
+- **Model Training**: Trains and evaluates various machine learning models to identify the best performer.
+- **Prediction Pipeline**: Allows users to input data and receive predictions on student performance.
+- **Web Application**: Provides a user-friendly interface for making predictions and viewing results.
+
+## Installation
 
 ### Prerequisites
 
 - Python 3.x
 - Pip (Python package installer)
 
-### Installation
+### Setup
 
-1. **Clone the repository**:
+1. **Clone the Repository**:
 
    ```bash
    git clone https://github.com/sushank99/Student-Performace-Outcome-Prediction.git
