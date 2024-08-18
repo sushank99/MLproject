@@ -37,7 +37,9 @@ The **Student Performance Outcome Prediction** project aims to predict students'
 - Python 3.9
 - Pandas
 - Flask
+- regresion models
 - Pip (Python package installer)
+- scikit learn
 
 ### Setup
 
@@ -50,7 +52,7 @@ The **Student Performance Outcome Prediction** project aims to predict students'
 - To start the web application, use:
 
    ```bash
-   python app.py     
+   python application.py     
 ### How to Use the Web Application
 - Navigate to http://localhost:5001 in your web browser.
 - Fill in the form with the required student details.
